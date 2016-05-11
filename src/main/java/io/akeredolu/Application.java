@@ -12,7 +12,7 @@ public class Application {
         boolean flag = true;
         while(flag){
             displayCurrentMemoryValue();
-            int choice = promptUserForInt("\nPress 1)to add 2)subtract 3)multiple 4)divide 5)reset 0)exit");
+            int choice = promptUserForInt("\nPress 1)to add 2)subtract 3)multiple 4)divide 5) square 6) squareRoot 7)reset 0)exit");
             switch(choice){
                 case 1:
                     addNumbers();
@@ -27,7 +27,13 @@ public class Application {
                     divideNumbers();
                     break;
                 case 5:
-                    resetMemory();
+                   squareNumbers();
+                    break;
+                case 6:
+                   resetMemory();
+                    break;
+                case 7:
+                 squareRootNumbers();
                     break;
                 case 0:
                     promptUser("Good Bye...");
@@ -47,26 +53,56 @@ public class Application {
     public void addNumbers(){
         int a = promptUserForInt("Please enter and integer to add to current value");
         int sum = add((int) memory ,a);
-        promptUser("The sum of " + memory + " + " +a  + " = "+ sum);
+        promptUser("The sum  " + a  + " is  = "+ num);
     }
 
     public void subtractNumbers(){
         int a = promptUserForInt("Please enter and integer to subtract to current value");
         int num = subtract((int) memory ,a);
-        promptUser("The difference of " + memory + " - " +a  + " = "+ num);
+        promptUser("The difference  " + a  + " is  = "+ num);
     }
 
     public void multiplyNumbers(){
         int a = promptUserForInt("Please enter and integer to multiply to current value");
         int num = multiply((int) memory ,a);
-        promptUser("The product of " + memory + " * " +a  + " = "+ num);
+        promptUser("The product of " + a  + " is  = "+ num);
     }
 
     public void divideNumbers(){
         double a = promptUserForDouble("Please enter and double to divide to current value");
         double num = divide(memory ,a);
-        promptUser("The quotient of " + memory + " / " +a  + " = "+ num);
+        promptUser("The division  of " + a  + " is  = "+ num);
     }
+
+
+    public void squareNumbers(){
+        double a = promptUserForDouble("Please enter and double to square to current value");
+        double num = square(a);
+        promptUser("The square  of " + a  + " is  = "+ num);
+
+    }
+
+    public void squareRootNumbers(){
+        double a = promptUserForDouble("Please enter and double to find the squareRoot");
+        double num = squareRoot(a);
+        promptUser("The square root of " + a  + " is  = "+ num);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public static void main(String[] args){
         Application app = new Application();
