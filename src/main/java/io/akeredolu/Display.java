@@ -9,6 +9,7 @@ public class Display {
 
     public static Scanner input = new Scanner(System.in);
 
+
     public static int promptUserForInt(String msg){
         promptUser(msg);
         return input.nextInt();
@@ -18,6 +19,7 @@ public class Display {
         promptUser(msg);
         return input.nextDouble();
     }
+
 
     public static void promptUser(String msg){
 

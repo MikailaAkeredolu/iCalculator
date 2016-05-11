@@ -68,17 +68,17 @@ public class CalculatorTest {
 
     //invertTheNumber
     @Test
-    public void invertTheNumberTest(){
+    public void invertTheSignTest(){
         double expected = -4.0;
-        double actual = invertTheNumber(4.0);
+        double actual =  invertSign(4.0);
         assertEquals(expected, actual,0.1);
     }
 
     //calculateLog
     @Test
-    public void calculateLogTest(){
+    public void naturalLogTest(){
         double expected = 2.302585092994046;
-        double actual = calculateLog(10.0);
+        double actual = naturalLog(10.0);
         assertEquals(expected, actual,0.1);
     }
 
@@ -97,7 +97,7 @@ public class CalculatorTest {
     public void calculateSineTest(){
         double expected = 0.7071067811865475;
         double actual = calculateSine(45.0);
-        assertEquals(expected, actual,0.1);
+        assertEquals(expected, actual,1e-9);
     }
 
     //inverseSineMethod
@@ -151,6 +151,9 @@ public class CalculatorTest {
         double actual = mCeeKey();
         assertEquals(expected, actual,1e-9);
     }
+
+
+
 
     /**
      * @Test

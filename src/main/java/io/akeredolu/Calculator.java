@@ -1,5 +1,7 @@
 package io.akeredolu;
 
+import static java.lang.Math.log;
+
 /**
  * Created by mikailaakeredolu on 5/10/16.
  */
@@ -57,18 +59,19 @@ public class Calculator {
         return memory;
     }
 
-    public static double invertTheNumber(double input1){
+    public static double invertSign(double input1){
         memory = input1 * -1;
         return memory;
 
     }
 
     //natural logarithm
-    public static double calculateLog(double input1){
-        memory =  Math.log(input1);
+    public static double naturalLog(double input1){
+        memory =  log(input1);
         return  memory;
     }
 
+    //baseTenLog
     public static double baseTenLog(double input1){
         memory = Math.log10(input1);
         return memory;
