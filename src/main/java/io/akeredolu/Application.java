@@ -18,7 +18,7 @@ public class Application {
         boolean flag = true;
         while(flag){
             displayCurrentMemoryValue();
-            int choice = promptUserForInt("\nPress (1) to add (2)subtract (3)multiple (4)divide (5) square \n(6) squareRoot (7)reset (8)exponent (9)inverse (10)inverse the sign\n(11)natural Log (12)base10Log (13)Calculate Sine (14)Arcsin \n (15)Arccos (0)exit");
+            int choice = promptUserForInt("\nPress (1) to add (2)subtract (3)multiple (4)divide (5) square \n(6) squareRoot (7)reset (8)exponent (9)inverse (10)inverse the sign\n(11)natural Log (12)base10Log (13)Calculate Sine (14)ArcSin \n (15)ArcCos (16)ArcTan (17)Tan (99)Clear the Display(0)exit");
             switch(choice){
                 case 1:
                     addNumbers();
@@ -64,6 +64,16 @@ public class Application {
                     break;
                 case 15:
                     inverseCosineNumber();
+                    break;
+                case 16:
+                    inverseTangentNumber();
+                    break;
+                case 17:
+                    calculateTangentNumber();
+                    break;
+                case 99:
+                    clearDisplay();
+                    break;
                 case 0:
                     promptUser("Good Bye...");
                     flag = false;
@@ -79,102 +89,102 @@ public class Application {
 
     public void displayCurrentMemoryValue(){
 
-        promptUser("The previous value is " + memory);
+        promptUser("The previous value is " + displayedValue);
     }
 
 
     public void addNumbers(){
-        int a = promptUserForInt("Please enter and integer to add to current value");
-        int num = add((int) memory ,a);
+        double a = promptUserForDouble("Enter a number to Add to the currently displayed value");
+        double num = add(a);
         promptUser("The addition is " + "= " + num);
     }
 
     public void subtractNumbers(){
-        int a = promptUserForInt("Please enter and integer to subtract to current value");
-        int num = subtract((int) memory ,a);
+        double a = promptUserForDouble("Enter a number to Subtract from currently displayed value");
+        double num = subtract(a);
         promptUser("The difference is " + "= " + num);
     }
 
     public void multiplyNumbers(){
-        int a = promptUserForInt("Please enter and integer to multiply to current value");
-        int num = multiply((int) memory ,a);
+        double a = promptUserForDouble("Enter a number to Multiply by the currently displayed number");
+        double num = multiply(a);
         promptUser("The product is " + "= " + num);
     }
 
     public void divideNumbers(){
-        double a = promptUserForDouble("Please enter and double to divide to current value");
-        double num = divide(memory ,a);
+        double a = promptUserForDouble("Enter a number to Divide the currently displayed number");
+        double num = divide(a);
         promptUser("The division is " + "= " + num);
     }
 
 
     public void squareNumbers(){
-        double a = promptUserForDouble("Please enter and double to square to current value");
-        double num = square(a);
-        promptUser("The square is " + "= " + num);
+       promptUserForDouble("You just squared the currently displayed value " + square());
+
 
     }
 
     public void squareRootNumbers(){
-        double a = promptUserForDouble("Please enter and double to find the squareRoot");
-        double num = squareRoot(a);
-        promptUser("The square root is " + "= " + num);
+      promptUserForDouble("You just calculated the square root of the currently displayed value " + squareRoot());
+
     }
 
 
     public void exponentOfNumber(){
-        double a = promptUserForInt("Please enter the number you want to find the exponent of ");
-        double b = promptUserForInt("Please enter the number ou want to raise it to");
-        double num = exponents(a,b);
-        promptUser("The exponent of " +  a + " raised to the power of  " + b + " is = " + num);
+        double a = promptUserForDouble("Enter a number to Calculate the exponent of currently displayed number");
+        double num = exponents(a);
+        promptUser("The exponent of " +  a + " raised to the power of  " + a + " is = " + num);
     }
 
 //inverseIt
 
-    public void inverseNumber(){
-        double a = promptUserForDouble("Please enter the number you want to inverse");
-        double num = inverseIt(a);
-        promptUser("The inverse is " + "= " + num);
+    public  void inverseNumber(){
+       promptUserForDouble(" You just did an inverse on the displayed number" + inverseIt());
     }
 
     public void inverseTheSignNumber(){
-        double a = promptUserForDouble("Please enter the positive number whose sign you want to switch to negative");
-        double num = invertSign(a);
-        promptUser("The result of making the sign inverse is " + num);
+     promptUserForDouble("You just switched the currently displayed number to a  negative number" + invertSign());
     }
 
     public void naturalLogNumber(){
-        double a = promptUserForDouble("Please enter the number whose log you want to calculate");
-        double num = naturalLog(a);
-        promptUser("The log of " + a + "is " + num);
+        promptUserForDouble("You just calculated the natural log of the number currently displayed" + naturalLog());
 
     }
 
 
     public void baseTenLogNumber(){
-        double a = promptUserForDouble("Enter the number you want to calculate the base10Log for ");
-        double num = baseTenLog(a);
-        promptUser("The base10Log for " + a + " is = " + num);
+    promptUserForDouble("You just calculated the base10Log for existing number displayed  " + baseTenLog());
     }
 
 
     public void calculateSineNumber(){
-        double a = promptUserForDouble("Enter a number to calculate the sine");
-        double num = calculateSine(a);
-        promptUser("The sine of " + a + "is =  " + num);
+      promptUserForDouble("You just calculated the sine of the displayed value " + calculateSine());
+
     }
 
     public void inverseSineMethodNumber(){
-        double a = promptUserForDouble("Enter the number whose sine you want to inverse");
-        double num = inverseSineMethod(a);
-        promptUser("Te inverse sine of  " + a + "is = " + num);
+        promptUserForDouble("You just did an inverse the Sine of the currently displayed value " + inverseSineMethod());
+        //double num = inverseSineMethod();
+        //promptUser("The inverse sine of  " + displayedValue + "is = " + num);
 
     }
 
     public void inverseCosineNumber(){
-        double a = promptUserForDouble("Enter the Cosine you want reversed ");
-        double num = inverseCosineMethod(a);
-        promptUser("The inverse of cosine " + a + "is = " + num);
+       promptUserForDouble("Reverse the Cosine of the displayed value ");
+        double num = inverseCosineMethod();
+        promptUser("The inverse of cosine " + displayedValue + "is = " + num);
+    }
+
+    public void inverseTangentNumber(){
+     promptUserForDouble("Reverse the tangent of teh displayed value");
+        double num = inverseTangent();
+        promptUser("The inverse of tangent " + displayedValue +  " is = " + num);
+    }
+
+    public void calculateTangentNumber(){
+     promptUserForDouble("Calculate the tangent of the displayed value");
+        double num = calculateTangent();
+        promptUser("The Tangent for "+ displayedValue + "is = " + num);
     }
 
     /**

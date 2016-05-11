@@ -7,113 +7,123 @@ import static java.lang.Math.log;
  */
 public class Calculator {
 
-    public static double memory = 0;
+    public static double displayedValue = 0;
     public static double radians;
-
     public static double otherMemory;
+   // public input = 0.0;
 
-    public static void resetMemory(){
-
-        memory = 0;
+    public static int clearDisplay(){
+        return 0;
     }
 
-    public static int add(int input1, int input2){
-        memory = input1 + input2;
-        return (int) memory;
-    }
+    public static double add(double input){
 
-    public static int subtract(int input1, int input2){
-        memory = input1 - input2;
-        return (int) memory;
-    }
-
-    public static int multiply(int input1, int input2){
-        memory = input1 * input2;
-        return (int) memory;
-    }
-
-    public static double divide(double input1, double input2){
-        memory = input1 / input2;
-        return memory;
-    }
-
-    public static double square(double input1){
-        memory = input1 * input1;
-        return memory;
-    }
-
-    public static double squareRoot(double input1){
-        memory = Math.sqrt(input1);
-       return memory;
+        displayedValue = input + displayedValue;
+      return displayedValue;
     }
 
 
-    public static double exponents(double input1, double input2){
 
-        memory= Math.pow(input1,input2);
-        return  memory;
-    }
-    public static double inverseIt(double input1){
-       memory = 1 / input1;
-
-        return memory;
+    public static double subtract(double input){
+        displayedValue = displayedValue - input;
+        return displayedValue;
     }
 
-    public static double invertSign(double input1){
-        memory = input1 * -1;
-        return memory;
+    public static double multiply(double input){
+        displayedValue = input * displayedValue;
+        return displayedValue;
+    }
+    public static double divide(double input){
+        if(input == 0){
+            System.out.println("Err");
+            clearDisplay();
+        }
+        displayedValue =  displayedValue / input;
+        return displayedValue;
+    }
+
+    public static double square(){
+     displayedValue = displayedValue * displayedValue;
+        return displayedValue;
+
+    }
+
+    public static double squareRoot(){
+        displayedValue = Math.sqrt(displayedValue);
+        return  displayedValue;
+
+    }
+
+    public static double exponents(double input){
+        displayedValue = Math.pow(displayedValue,input);
+        return  displayedValue;
+    }
+
+    public static double inverseIt(){
+       displayedValue = 1 / displayedValue;
+        return displayedValue;
+    }
+
+    public static double invertSign(){
+        displayedValue =  displayedValue * -1;
+        return displayedValue;
 
     }
 
     //natural logarithm
-    public static double naturalLog(double input1){
-        memory =  log(input1);
-        return  memory;
+    public static double naturalLog(){
+        displayedValue =  log(displayedValue);
+        return  displayedValue;
     }
 
     //baseTenLog
-    public static double baseTenLog(double input1){
-        memory = Math.log10(input1);
-        return memory;
+    public static double baseTenLog(){
+        displayedValue = Math.log10(displayedValue);
+        return displayedValue;
     }
 
-    public static double calculateSine(double input1){
-        radians = Math.toRadians(input1);
-        memory = Math.sin(radians);
-        return memory;
+    public static double calculateSine(){
+        radians = Math.toRadians(displayedValue);
+        displayedValue = Math.sin(radians);
+        return displayedValue;
     }
 
-    public static double inverseSineMethod(double input1){
-        memory = Math.toDegrees(Math.asin(input1));
-       return memory;
+    public static double inverseSineMethod(){
+        displayedValue = Math.toDegrees(Math.asin(displayedValue));
+       return displayedValue;
     }
 
-    public static double inverseCosineMethod(double input1){
-       memory = Math.toDegrees(Math.acos(input1));
-        return memory;
+    public static double inverseCosineMethod(){
+       displayedValue = Math.toDegrees(Math.acos(displayedValue));
+        return displayedValue;
 
     }
 
-    public static double inverseTangent(double input1){
-       memory = Math.toDegrees(Math.atan(input1));
-        return  memory;
+    public static double inverseTangent(){
+       displayedValue = Math.toDegrees(Math.atan(displayedValue));
+        return  displayedValue;
     }
 
-    public static double calculateTangent(double input1){
-        radians = Math.toRadians(input1);
-       memory = Math.tan(radians);
-        return memory;
+    public static double calculateTangent(){
+        radians = Math.toRadians(displayedValue);
+       displayedValue = Math.tan(radians);
+        return displayedValue;
     }
 
     //add currently displayed value to memory
     public static double memoryPlusKey(){
-        memory = otherMemory;
-        return memory;
+        displayedValue = otherMemory;
+        return displayedValue;
     }
 
     public static double mCeeKey(){
 
-        return memory = 0.0;
+        return displayedValue = 0.0;
+    }
+
+    public static void resetMemory(){
+
+        displayedValue = 0;
     }
 
     /**
