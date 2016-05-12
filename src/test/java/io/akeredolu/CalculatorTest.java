@@ -149,32 +149,30 @@ public class CalculatorTest {
 
     @Test
     public void memoryPlusKeyTest(){
+        Calculator.memory = 4.0;
+        Calculator.memory = 5.0;
         double expected = 5.0;
-        double actual = memoryPlusKey();
+        double actual = Calculator.memory;
         assertEquals(expected, actual,1e-9);
     }
 
     //mCeeKey()
 
     @Test
-    public void mCeeKeyTest(){
+    public void resetMemoryTest(){
         double expected = 0.0;
-        double actual = mCeeKey();
+        double actual = resetMemoryMCKey();
         assertEquals(expected, actual,1e-9);
     }
 
 
-
-
-    /**
-     * @Test
-    public void mRcKeyTest(){
-    double expected = 0.0;
-    double actual = mRcKey();
+    @Test
+    public void recallMemoryMRCKeyTest(){
+    Calculator.setMemory(10.0);
+    double expected = 10.0;
+    double actual = Calculator.memory ;
     assertEquals(expected, actual,1e-9);
     }
-     */
-    //mRcKey()
 
 
 }

@@ -7,10 +7,39 @@ import static java.lang.Math.log;
  */
 public class Calculator {
 
+    /**
+     * Variables
+     */
+
     public static double displayedValue = 0;
     public static double radians;
-    public static double otherMemory;
-   // public input = 0.0;
+    public static double memory = 0;
+
+    /**
+     *
+     * Setters and Getters
+     */
+    public static double getMemory() {
+        return memory;
+    }
+
+    public static void setMemory(double memory) {
+        Calculator.memory = memory;
+    }
+
+    public static double getDisplayedValue() {
+        return displayedValue;
+    }
+
+    public static void setDisplayedValue(double displayedValue) {
+
+        Calculator.displayedValue = displayedValue;
+    }
+
+    /**
+     *
+     * End of Setters and Getters!
+     */
 
     public static int clearDisplay(){
         return 0;
@@ -21,8 +50,6 @@ public class Calculator {
         displayedValue = input + displayedValue;
       return displayedValue;
     }
-
-
 
     public static double subtract(double input){
         displayedValue = displayedValue - input;
@@ -82,10 +109,27 @@ public class Calculator {
         return displayedValue;
     }
 
+    /**Trig Functions
+
+     */
+
     public static double calculateSine(){
         radians = Math.toRadians(displayedValue);
         displayedValue = Math.sin(radians);
         return displayedValue;
+    }
+
+    public static double calculateTangent(){
+        radians = Math.toRadians(displayedValue);
+        displayedValue = Math.tan(radians);
+        return displayedValue;
+    }
+
+    public static double calculateCosine(){
+        radians = Math.toRadians(displayedValue);
+        displayedValue = Math.cos(radians);
+        return displayedValue;
+
     }
 
     public static double inverseSineMethod(){
@@ -104,34 +148,42 @@ public class Calculator {
         return  displayedValue;
     }
 
-    public static double calculateTangent(){
-        radians = Math.toRadians(displayedValue);
-       displayedValue = Math.tan(radians);
-        return displayedValue;
+    /**Trig Functions end here
+
+     */
+
+
+    /**switch Trig unit modes to degrees,radians
+     *
+     * Tod do.....
+     */
+
+    /**
+     *
+     * Memory functions - //add currently displayed value to memory
+     * @param displayedValue
+     */
+
+    //Store in memory and update display
+
+    public static double memoryPlusKey(double displayedValue){
+       setDisplayedValue(memory);
+        Calculator.memory = displayedValue;
+        return memory;
     }
 
-    //add currently displayed value to memory
-    public static double memoryPlusKey(){
-        displayedValue = otherMemory;
-        return displayedValue;
-    }
-
-    public static double mCeeKey(){
+    //reset memory
+    public static double resetMemoryMCKey(){
 
         return displayedValue = 0.0;
     }
 
-    public static void resetMemory(){
 
-        displayedValue = 0;
-    }
-
-    /**
-     *  public void mRcKey(){
-     memory = otherMemory;
-
+    //recall the current value form memory to display
+    public static void recallMemoryMRCKey(){
+        setDisplayedValue(memory);
      }
-     */
+
 
 
 

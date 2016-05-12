@@ -17,8 +17,9 @@ public class Application {
     public void engine(){
         boolean flag = true;
         while(flag){
-            displayCurrentMemoryValue();
-            int choice = promptUserForInt("\nPress (1) to add (2)subtract (3)multiple (4)divide (5) square \n(6) squareRoot (7)reset (8)exponent (9)inverse (10)inverse the sign\n(11)natural Log (12)base10Log (13)Calculate Sine (14)ArcSin \n (15)ArcCos (16)ArcTan (17)Tan (99)Clear the Display(0)exit");
+           // displayCurrentMemoryValue();
+            int choice = promptUserForInt("\nPress (1) to add (2)subtract (3)multiple (4)divide (5) square \n(6) squareRoot (7)reset Memory (8)exponent (9)inverse (10)inverse the sign\n(11)natural Log (12)base10Log (13)Calculate Sine (14)ArcSin \n (15)ArcCos (16)ArcTan (17)Tan (18)M+ Key (19)Cosine (20)MRC \n(99)Clear the Display(0)exit");
+
             switch(choice){
                 case 1:
                     addNumbers();
@@ -39,7 +40,7 @@ public class Application {
                     squareRootNumbers();
                     break;
                 case 7:
-                    resetMemory();
+                    mCeeKeyResetsMemory();
                     break;
                 case 8:
                     exponentOfNumber();
@@ -71,6 +72,15 @@ public class Application {
                 case 17:
                     calculateTangentNumber();
                     break;
+                case 18:
+                    memoryPlusKeyNumber();
+                    break;
+                case 19:
+                    calculateCosineNumber();
+                    break;
+                case 20:
+                  recallMemoryMRCKeyNumbers();
+                    break;
                 case 99:
                     clearDisplay();
                     break;
@@ -85,12 +95,12 @@ public class Application {
 
     /**
      * Display Current Memory and Value
+     *   public void displayCurrentMemoryValue(){
+
+     promptUser("The previous value is " + getDisplayedValue());
+     }
+     *
      */
-
-    public void displayCurrentMemoryValue(){
-
-        promptUser("The previous value is " + displayedValue);
-    }
 
 
     public void addNumbers(){
@@ -112,26 +122,26 @@ public class Application {
     }
 
     public void divideNumbers(){
-        double a = promptUserForDouble("Enter a number to Divide the currently displayed number");
+        double a = promptUserForDouble("Enter a number to Divide the currently displayed number ");
         double num = divide(a);
         promptUser("The division is " + "= " + num);
     }
 
 
     public void squareNumbers(){
-       promptUserForDouble("You just squared the currently displayed value " + square());
+       promptUserForDouble("You just squared the currently displayed value and the result is " + square());
 
 
     }
 
     public void squareRootNumbers(){
-      promptUserForDouble("You just calculated the square root of the currently displayed value " + squareRoot());
+      promptUserForDouble("You just calculated the square root of the currently displayed value and the result is " + squareRoot());
 
     }
 
 
     public void exponentOfNumber(){
-        double a = promptUserForDouble("Enter a number to Calculate the exponent of currently displayed number");
+        double a = promptUserForDouble("Enter a number to Calculate the exponent of currently displayed number ");
         double num = exponents(a);
         promptUser("The exponent of " +  a + " raised to the power of  " + a + " is = " + num);
     }
@@ -139,58 +149,79 @@ public class Application {
 //inverseIt
 
     public  void inverseNumber(){
-       promptUserForDouble(" You just did an inverse on the displayed number" + inverseIt());
+       promptUserForDouble(" You just did an inverse on the displayed number and the result is " + inverseIt());
     }
 
     public void inverseTheSignNumber(){
-     promptUserForDouble("You just switched the currently displayed number to a  negative number" + invertSign());
+     promptUserForDouble("You just switched the currently displayed number to a  negative number and the result is " + invertSign());
     }
 
     public void naturalLogNumber(){
-        promptUserForDouble("You just calculated the natural log of the number currently displayed" + naturalLog());
+        promptUserForDouble("You just calculated the natural log of the number currently displayed and the result is " + naturalLog());
 
     }
 
 
     public void baseTenLogNumber(){
-    promptUserForDouble("You just calculated the base10Log for existing number displayed  " + baseTenLog());
+    promptUserForDouble("You just calculated the base10Log for existing number displayed and the result is " + baseTenLog());
     }
 
 
     public void calculateSineNumber(){
-      promptUserForDouble("You just calculated the sine of the displayed value " + calculateSine());
+      promptUserForDouble("You just calculated the sine of the displayed value and the result is " + calculateSine());
 
     }
 
+    public void calculateCosineNumber(){
+        promptUserForDouble("You just calculated the Cosine of the displayed value and the result is " + calculateCosine());
+    }
+
     public void inverseSineMethodNumber(){
-        promptUserForDouble("You just did an inverse the Sine of the currently displayed value " + inverseSineMethod());
+        promptUserForDouble("You just did an inverse the Sine of the currently displayed value and the result is " + inverseSineMethod());
         //double num = inverseSineMethod();
         //promptUser("The inverse sine of  " + displayedValue + "is = " + num);
 
     }
 
     public void inverseCosineNumber(){
-       promptUserForDouble("Reverse the Cosine of the displayed value ");
-        double num = inverseCosineMethod();
-        promptUser("The inverse of cosine " + displayedValue + "is = " + num);
+       promptUserForDouble("You have just reversed the Cosine of the displayed value and the result is " + inverseCosineMethod());
+       // double num = inverseCosineMethod();
+        //promptUser("The inverse of cosine " + displayedValue + "is = " + num);
     }
 
     public void inverseTangentNumber(){
-     promptUserForDouble("Reverse the tangent of teh displayed value");
-        double num = inverseTangent();
-        promptUser("The inverse of tangent " + displayedValue +  " is = " + num);
+     promptUserForDouble("You have just reversed the tangent of teh displayed value and the result is " + inverseTangent());
+        //double num = inverseTangent();
+        //promptUser("The inverse of tangent " + displayedValue +  " is = " + num);
     }
 
     public void calculateTangentNumber(){
-     promptUserForDouble("Calculate the tangent of the displayed value");
-        double num = calculateTangent();
-        promptUser("The Tangent for "+ displayedValue + "is = " + num);
+     promptUserForDouble("Calculate the tangent of the displayed value and the result is " + calculateTangent());
+        //double num = calculateTangent();
+        //promptUser("The Tangent for "+ displayedValue + "is = " + num);
+    }
+
+    public void mCeeKeyResetsMemory(){
+        promptUserForDouble("You have just reset memory to 0" + resetMemoryMCKey());
+    }
+
+    public void memoryPlusKeyNumber(){
+        promptUserForDouble("you have stored the displayed value to memory " + memoryPlusKey(getDisplayedValue()));
+       // double num = memo;
+        //promptUser("The product is " + "= " + num);
+    }
+
+    public void recallMemoryMRCKeyNumbers(){
+        promptUserForDouble("The store value in memory is : " + getMemory());
     }
 
     /**
      *
      * MAIN to create object and call engine to run calculator
      */
+
+
+
 
     public static void main(String[] args){
         Application app = new Application();
