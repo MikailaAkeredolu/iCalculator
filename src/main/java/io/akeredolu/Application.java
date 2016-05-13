@@ -1,5 +1,7 @@
 package io.akeredolu;
 
+import java.util.Scanner;
+
 import static  io.akeredolu.Calculator.*;
 import static  io.akeredolu.Display.*;
 
@@ -17,11 +19,13 @@ public class Application {
 
     public  calculatorModes defaultMode = calculatorModes.BINARY;
     calculatorModes currentMode = defaultMode;
+
+
             public void engine(){
                 boolean flag = true;
                 // ask the user what display
                 while(flag){
-                    int choice = promptUserForInt("\nPress (1) to add (2)subtract (3)multiple (4)divide (5) square \n(6) squareRoot (7)reset Memory (8)exponent (9)inverse (10)inverse the sign\n(11)natural Log (12)base10Log (13)Calculate Sine (14)ArcSin \n (15)ArcCos (16)ArcTan (17)Tan (18)M+ Key (19)Cosine (20)MRC \n(21)Factorial (30)switchDisplayMode (99)Clear(0)exit");
+                    int choice = promptUserForInt("\nPress (1) to add (2)subtract (3)multiple (4)divide (5) square \n(6) squareRoot (7)reset Memory (8)exponent (9)inverse (10)inverse the sign\n(11)natural Log (12)base10Log (13)Calculate Sine (14)ArcSin \n (15)ArcCos (16)ArcTan (17)Tan (18)M+ Key (19)Cosine (20)MRC \n(21)Factorial (30)switchDisplayMode (31)selectDisplayMode(99)Clear(0)exit");
                     switch(choice){
                         case 1:
                             addNumbers();
@@ -85,9 +89,12 @@ public class Application {
                             break;
                         case 21:
                             factorialNumbers();
+                            break;
                         case 30:
                            switchDisplay();
                             break;
+                        case 31:
+                            switchDisplay("binary");
                         case 99:
                             clearDisplay();
                             break;
@@ -233,13 +240,9 @@ public class Application {
     }
 
 
-
-
     public  void switchDisplay()
     {
-        //track current mode
 
-        //defaultMode = calculatorModes.BINARY;
         switch (currentMode)
         {
             case BINARY:
@@ -265,22 +268,25 @@ public class Application {
     }
 
     public void switchDisplay(String mode){
-       // promptUser("Enter binary, decimal,octal or hexadecimal to switch modes");
+        Scanner input = new Scanner(System.in);
+        System.out.println("enter a mode such as | binary | decimal | octal | hexadecimal ");
+        mode = input.nextLine();
         switch (mode)
         {
             case "binary":
-                //display value is equals to the binary version
-                System.out.println(calculatorModes.BINARY);
+                System.out.println("You are now in " + calculatorModes.BINARY + " Mode and the binary of " + displayedValue + " is = " +  Long.toBinaryString(Double.doubleToRawLongBits(displayedValue)));
                 break;
             case "decimal":
-                System.out.println(calculatorModes.DECIMAL);
+                System.out.println("You are now in " + calculatorModes.DECIMAL + " Mode");
                 break;
             case "octal":
-                System.out.println(calculatorModes.OCTAL);
+                System.out.println("You are now in " + calculatorModes.OCTAL + " Mode");
+                break;
             case "hexadecimal":
-                System.out.println(calculatorModes.HEXADECIMAL);
+                System.out.println("You are now in " + calculatorModes.HEXADECIMAL + " Mode");
+                break;
             default:
-                System.out.println(calculatorModes.DECIMAL);
+                System.out.println("You are now in " + calculatorModes.DECIMAL + " Mode");
         }
 
     }
