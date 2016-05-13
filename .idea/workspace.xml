@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f6cbbe1-0d9b-42fe-a3f9-5f823df58455" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/io/akeredolu/Application.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/io/akeredolu/Display.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/io/akeredolu/Calculator.class" afterPath="$PROJECT_DIR$/target/classes/io/akeredolu/Calculator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/iCalculator.iml" afterPath="$PROJECT_DIR$/iCalculator.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/akeredolu/Application.java" afterPath="$PROJECT_DIR$/src/main/java/io/akeredolu/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/akeredolu/Calculator.java" afterPath="$PROJECT_DIR$/src/main/java/io/akeredolu/Calculator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/akeredolu/Display.java" afterPath="$PROJECT_DIR$/src/main/java/io/akeredolu/Display.java" />
     </list>
     <ignored path="iCalculator.iws" />
@@ -47,18 +40,9 @@
       <file leaf-file-name="Calculator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/akeredolu/Calculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1046">
+            <state relative-caret-position="1260">
               <caret line="167" column="7" selection-start-line="167" selection-start-column="7" selection-end-line="167" selection-end-column="7" />
-              <folding>
-                <element signature="e#368#369#0" expanded="false" />
-                <element signature="e#397#398#0" expanded="false" />
-                <element signature="e#448#449#0" expanded="false" />
-                <element signature="e#490#491#0" expanded="false" />
-                <element signature="e#538#539#0" expanded="false" />
-                <element signature="e#575#576#0" expanded="false" />
-                <element signature="e#4174#4175#0" expanded="false" />
-                <element signature="e#4216#4217#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -66,12 +50,12 @@
       <file leaf-file-name="Application.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/akeredolu/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3180">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="2640">
+              <caret line="302" column="5" selection-start-line="302" selection-start-column="5" selection-end-line="302" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#7298#7299#0" expanded="true" />
-                <element signature="e#7382#7383#0" expanded="true" />
+                <element signature="e#8219#8220#0" expanded="true" />
+                <element signature="e#8303#8304#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,12 +64,9 @@
       <file leaf-file-name="Display.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/akeredolu/Display.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-              <folding>
-                <element signature="e#558#559#0" expanded="true" />
-                <element signature="e#597#598#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="555">
+              <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -103,11 +84,10 @@
       <file leaf-file-name="CalculatorTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/io/akeredolu/CalculatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1815">
-              <caret line="121" column="24" selection-start-line="121" selection-start-column="24" selection-end-line="121" selection-end-column="25" />
+            <state relative-caret-position="-426">
+              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
               <folding>
-                <marker date="1463086655000" expanded="true" signature="3977:4104" placeholder="{...}" />
-                <marker date="1463086655000" expanded="true" signature="4157:4305" placeholder="{...}" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -163,9 +143,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="18" />
-    <option name="y" value="63" />
+    <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="716" />
+    <option name="height" value="714" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -286,32 +266,6 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager" selected="Application.Application">
-    <configuration default="false" name="CalculatorTest.invertTheSignTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="io.akeredolu.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="iCalculator" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="io.akeredolu" />
-      <option name="MAIN_CLASS_NAME" value="io.akeredolu.CalculatorTest" />
-      <option name="METHOD_NAME" value="invertTheSignTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -397,6 +351,32 @@
       <option name="PACKAGE_NAME" value="io.akeredolu" />
       <option name="MAIN_CLASS_NAME" value="io.akeredolu.CalculatorTest" />
       <option name="METHOD_NAME" value="recallMemoryMRCKeyTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="CalculatorTest.addTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="io.akeredolu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="iCalculator" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="io.akeredolu" />
+      <option name="MAIN_CLASS_NAME" value="io.akeredolu.CalculatorTest" />
+      <option name="METHOD_NAME" value="addTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -812,19 +792,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.CalculatorTest.invertTheSignTest" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Application" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.CalculatorTest.memoryPlusKeyTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.CalculatorTest.mRcKeyTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.CalculatorTest.recallMemoryMRCKeyTest" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Application" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.CalculatorTest.memoryPlusKeyTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.CalculatorTest.mRcKeyTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.CalculatorTest.recallMemoryMRCKeyTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.CalculatorTest.addTest" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.Application" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.CalculatorTest.recallMemoryMRCKeyTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.CalculatorTest.mRcKeyTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.CalculatorTest.memoryPlusKeyTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.CalculatorTest.invertTheSignTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.CalculatorTest.addTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CalculatorTest.recallMemoryMRCKeyTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.CalculatorTest.mRcKeyTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.CalculatorTest.memoryPlusKeyTest" />
       </list>
     </recent_temporary>
   </component>
@@ -842,19 +822,19 @@
       <option name="presentableId" value="Default" />
       <updated>1462891230585</updated>
       <workItem from="1462891234015" duration="44542000" />
-      <workItem from="1463079021999" duration="18995000" />
+      <workItem from="1463079021999" duration="29092000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
+    <history-entry file="CalculatorTest_addTest - 2016.05.13 at 13h 41m 40s.xml">
+      <configuration name="CalculatorTest.addTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CalculatorTest_addTest - 2016.05.13 at 13h 43m 03s.xml">
+      <configuration name="CalculatorTest.addTest" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="CalculatorTest_mRcKeyTest - 2016.05.12 at 16h 48m 26s.xml">
       <configuration name="CalculatorTest.mRcKeyTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CalculatorTest_memoryPlusKeyTest - 2016.05.12 at 08h 08m 59s.xml">
-      <configuration name="CalculatorTest.memoryPlusKeyTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CalculatorTest_memoryPlusKeyTest - 2016.05.12 at 08h 09m 49s.xml">
-      <configuration name="CalculatorTest.memoryPlusKeyTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="CalculatorTest_memoryPlusKeyTest - 2016.05.12 at 08h 14m 19s.xml">
       <configuration name="CalculatorTest.memoryPlusKeyTest" configurationId="JUnit" />
@@ -879,7 +859,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63537000" />
+    <option name="totallyTimeSpent" value="73634000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -891,18 +871,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="18" y="63" width="1280" height="716" extended-state="0" />
+    <frame x="18" y="23" width="1280" height="714" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32852563" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45352563" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4533762" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.503231" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4070513" sideWeight="0.49676898" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4067524" sideWeight="0.49676898" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -955,35 +935,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2340">
           <caret line="162" column="22" selection-start-line="162" selection-start-column="22" selection-end-line="162" selection-end-column="22" />
-          <folding>
-            <element signature="e#368#369#0" expanded="false" />
-            <element signature="e#397#398#0" expanded="false" />
-            <element signature="e#448#449#0" expanded="false" />
-            <element signature="e#490#491#0" expanded="false" />
-            <element signature="e#538#539#0" expanded="false" />
-            <element signature="e#575#576#0" expanded="false" />
-            <element signature="e#4174#4175#0" expanded="false" />
-            <element signature="e#4216#4217#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/io/akeredolu/CalculatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1815">
-          <caret line="121" column="24" selection-start-line="121" selection-start-column="24" selection-end-line="121" selection-end-column="25" />
-          <folding>
-            <marker date="1463086655000" expanded="true" signature="3977:4104" placeholder="{...}" />
-            <marker date="1463086655000" expanded="true" signature="4157:4305" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1003,42 +955,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/io/akeredolu/CalculatorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-426">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/akeredolu/Calculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1046">
+        <state relative-caret-position="1260">
           <caret line="167" column="7" selection-start-line="167" selection-start-column="7" selection-end-line="167" selection-end-column="7" />
-          <folding>
-            <element signature="e#368#369#0" expanded="false" />
-            <element signature="e#397#398#0" expanded="false" />
-            <element signature="e#448#449#0" expanded="false" />
-            <element signature="e#490#491#0" expanded="false" />
-            <element signature="e#538#539#0" expanded="false" />
-            <element signature="e#575#576#0" expanded="false" />
-            <element signature="e#4174#4175#0" expanded="false" />
-            <element signature="e#4216#4217#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/akeredolu/Display.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="e#558#559#0" expanded="true" />
-            <element signature="e#597#598#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="555">
+          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/akeredolu/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3180">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="2640">
+          <caret line="302" column="5" selection-start-line="302" selection-start-column="5" selection-end-line="302" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#7298#7299#0" expanded="true" />
-            <element signature="e#7382#7383#0" expanded="true" />
+            <element signature="e#8219#8220#0" expanded="true" />
+            <element signature="e#8303#8304#0" expanded="true" />
           </folding>
         </state>
       </provider>

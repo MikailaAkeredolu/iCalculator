@@ -15,101 +15,106 @@ import static  io.akeredolu.Display.*;
 public class Application {
 
 
-    public void engine(){
-        boolean flag = true;
-        while(flag){
-            int choice = promptUserForInt("\nPress (1) to add (2)subtract (3)multiple (4)divide (5) square \n(6) squareRoot (7)reset Memory (8)exponent (9)inverse (10)inverse the sign\n(11)natural Log (12)base10Log (13)Calculate Sine (14)ArcSin \n (15)ArcCos (16)ArcTan (17)Tan (18)M+ Key (19)Cosine (20)MRC \n(21)Factorial (30)switchDisplayMode (99)Clear(0)exit");
-            switch(choice){
-                case 1:
-                    addNumbers();
-                    break;
-                case 2:
-                    subtractNumbers();
-                    break;
-                case 3:
-                    multiplyNumbers();
-                    break;
-                case 4:
-                    divideNumbers();
-                    break;
-                case 5:
-                   squareNumbers();
-                    break;
-                case 6:
-                    squareRootNumbers();
-                    break;
-                case 7:
-                    mCeeKeyResetsMemory();
-                    break;
-                case 8:
-                    exponentOfNumber();
-                    break;
-                case 9:
-                   inverseNumber();
-                    break;
-                case 10:
-                    inverseTheSignNumber();
-                    break;
-                case 11:
-                    naturalLogNumber();
-                    break;
-                case 12:
-                    baseTenLogNumber();
-                    break;
-                case 13:
-                    calculateSineNumber();
-                    break;
-                case 14:
-                    inverseSineMethodNumber();
-                    break;
-                case 15:
-                    inverseCosineNumber();
-                    break;
-                case 16:
-                    inverseTangentNumber();
-                    break;
-                case 17:
-                    calculateTangentNumber();
-                    break;
-                case 18:
-                    memoryPlusKeyNumber();
-                    break;
-                case 19:
-                    calculateCosineNumber();
-                    break;
-                case 20:
-                  recallMemoryMRCKeyNumbers();
-                    break;
-                case 21:
-                    factorialNumbers();
-                case 30:
-                    switchDisplay();
-
-                case 99:
-                    clearDisplay();
-                    break;
-                case 0:
-                    promptUser("Good Bye...");
-                    flag = false;
-                    break;
+    public  calculatorModes defaultMode = calculatorModes.BINARY;
+    calculatorModes currentMode = defaultMode;
+            public void engine(){
+                boolean flag = true;
+                // ask the user what display
+                while(flag){
+                    int choice = promptUserForInt("\nPress (1) to add (2)subtract (3)multiple (4)divide (5) square \n(6) squareRoot (7)reset Memory (8)exponent (9)inverse (10)inverse the sign\n(11)natural Log (12)base10Log (13)Calculate Sine (14)ArcSin \n (15)ArcCos (16)ArcTan (17)Tan (18)M+ Key (19)Cosine (20)MRC \n(21)Factorial (30)switchDisplayMode (99)Clear(0)exit");
+                    switch(choice){
+                        case 1:
+                            addNumbers();
+                            break;
+                        case 2:
+                            subtractNumbers();
+                            break;
+                        case 3:
+                            multiplyNumbers();
+                            break;
+                        case 4:
+                            divideNumbers();
+                            break;
+                        case 5:
+                            squareNumbers();
+                            break;
+                        case 6:
+                            squareRootNumbers();
+                            break;
+                        case 7:
+                            mCeeKeyResetsMemory();
+                            break;
+                        case 8:
+                            exponentOfNumber();
+                            break;
+                        case 9:
+                            inverseNumber();
+                            break;
+                        case 10:
+                            inverseTheSignNumber();
+                            break;
+                        case 11:
+                            naturalLogNumber();
+                            break;
+                        case 12:
+                            baseTenLogNumber();
+                            break;
+                        case 13:
+                            calculateSineNumber();
+                            break;
+                        case 14:
+                            inverseSineMethodNumber();
+                            break;
+                        case 15:
+                            inverseCosineNumber();
+                            break;
+                        case 16:
+                            inverseTangentNumber();
+                            break;
+                        case 17:
+                            calculateTangentNumber();
+                            break;
+                        case 18:
+                            memoryPlusKeyNumber();
+                            break;
+                        case 19:
+                            calculateCosineNumber();
+                            break;
+                        case 20:
+                            recallMemoryMRCKeyNumbers();
+                            break;
+                        case 21:
+                            factorialNumbers();
+                        case 30:
+                           switchDisplay();
+                            break;
+                        case 99:
+                            clearDisplay();
+                            break;
+                        case 0:
+                            promptUser("Good Bye...");
+                            flag = false;
+                            break;
+                    }
+                }
             }
-        }
-    }
 
-    /**
-     * Display Current Memory and Value
-     *   public void displayCurrentMemoryValue(){
+            /**
+             * Display Current Memory and Value
+             *   public void displayCurrentMemoryValue(){
 
-     promptUser("The previous value is " + getDisplayedValue());
-     }
-     *
-     */
+             promptUser("The previous value is " + getDisplayedValue());
+             }
+             *
+             */
 
 
-    public void addNumbers(){
+
+        public void addNumbers(){
         double a = promptUserForDouble("Enter a number to Add to the currently displayed value");
         double num = add(a);
         promptUser("The addition is " + "= " + num);
+        //printBinary((int)num);
     }
 
     public void subtractNumbers(){
@@ -227,35 +232,44 @@ public class Application {
         BINARY, OCTAL, DECIMAL, HEXADECIMAL
     }
 
-    public  calculatorModes change = calculatorModes.BINARY;
 
 
 
     public  void switchDisplay()
     {
+        //track current mode
 
-        switch (change)
+        //defaultMode = calculatorModes.BINARY;
+        switch (currentMode)
         {
             case BINARY:
                 System.out.println("You are in  "+ calculatorModes.DECIMAL + " mode");
+                currentMode = calculatorModes.DECIMAL;
                 break;
             case DECIMAL:
                 System.out.println(calculatorModes.OCTAL);
+                currentMode = calculatorModes.OCTAL;
                 break;
             case OCTAL:
                 System.out.println(calculatorModes.HEXADECIMAL);
+                currentMode = calculatorModes.HEXADECIMAL;
+                break;
+            case HEXADECIMAL:
+                System.out.println("You are in  "+ calculatorModes.BINARY + " mode");
+                currentMode = calculatorModes.BINARY;
+                break;
             default:
                 System.out.println("You are in  "+ calculatorModes.DECIMAL + " mode");
         }
 
     }
 
-
     public void switchDisplay(String mode){
-        promptUser("Enter binary, decimal,octal or hexadecimal to switch modes");
+       // promptUser("Enter binary, decimal,octal or hexadecimal to switch modes");
         switch (mode)
         {
             case "binary":
+                //display value is equals to the binary version
                 System.out.println(calculatorModes.BINARY);
                 break;
             case "decimal":
@@ -271,6 +285,22 @@ public class Application {
 
     }
 
+
+        /*
+    private boolean displayMode = false;
+
+    public  toggleDisplayMode(){
+
+        if(displayMode){
+            // call one display
+            //prompt for display
+              displayMode = true;
+             }else {
+            // call other
+               displayMode = false;
+            //}
+            // }
+   */
 
     /**
      *

@@ -9,6 +9,7 @@ public class Display {
 
     public static Scanner input = new Scanner(System.in);
 
+    //switch message of 4 different modes and use the .decimal modes
 
     public static int promptUserForInt(String msg){
         promptUser(msg);
@@ -25,11 +26,19 @@ public class Display {
         System.out.println(msg);
     }
 
+    /*
+    public static void printBinary(int n){
+        System.out.println(Integer.toBinaryString(n));
+    }
+
+
+    //if mode is  binary then convert answer to binary
+
     public static String askForStringInput(){
         return input.nextLine();
     }
 
-
+    */
 
 
 
