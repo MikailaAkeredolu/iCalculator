@@ -274,21 +274,33 @@ public class Application {
         switch (mode)
         {
             case "binary":
-                System.out.println("You are now in " + calculatorModes.BINARY + " Mode and the binary of " + displayedValue + " is = " +  Long.toBinaryString(Double.doubleToRawLongBits(displayedValue)));
+                System.out.println("You are now in " + calculatorModes.BINARY + " Mode and the binary of " + displayedValue + " is = " +  Integer.toBinaryString(binaryConverter()));
                 break;
             case "decimal":
-                System.out.println("You are now in " + calculatorModes.DECIMAL + " Mode");
+                System.out.println("You are now in " + calculatorModes.DECIMAL + "Mode");
                 break;
             case "octal":
-                System.out.println("You are now in " + calculatorModes.OCTAL + " Mode");
+                System.out.println("You are now in " + calculatorModes.OCTAL +  " Mode and the octal of " + displayedValue + " is = " +  Integer.toOctalString(octalConverter()));
                 break;
             case "hexadecimal":
-                System.out.println("You are now in " + calculatorModes.HEXADECIMAL + " Mode");
+                System.out.println("You are now in " + calculatorModes.HEXADECIMAL + " Mode and the hexadecimal of "  + displayedValue +  " is = " + Integer.toHexString(hexConverter()));
                 break;
             default:
                 System.out.println("You are now in " + calculatorModes.DECIMAL + " Mode");
         }
 
+    }
+
+    public int octalConverter(){
+        return (int) displayedValue;
+    }
+
+    public int hexConverter(){
+        return (int) displayedValue;
+    }
+
+    public int binaryConverter(){
+        return (int) displayedValue;
     }
 
 

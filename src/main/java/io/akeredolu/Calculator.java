@@ -112,10 +112,17 @@ public class Calculator {
     }
 
     public static double calculateCosine(){
+        //in radians
         radians = Math.toRadians(displayedValue);
         displayedValue = Math.cos(radians);
         return displayedValue;
+        //if its degrees
 
+        /*
+        degrees = Math.toDegrees(displayedValue);
+        displayedValue = Math.cos(radians);
+        return displayedValue;
+        */
     }
 
     public static double inverseSineMethod(){
@@ -168,8 +175,6 @@ public class Calculator {
     /**
      * Memory functions - //adds currently displayed value to memory
      */
-
-    //Store in memory and update display
 
     public static double memoryPlusKey(double displayedValue){
       // setDisplayedValue(memory);
