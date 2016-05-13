@@ -16,9 +16,9 @@ public class Calculator {
     public static double memory = 0;
 
     /**
-     *
      * Setters and Getters
      */
+
     public static double getMemory() {
         return memory;
     }
@@ -37,12 +37,12 @@ public class Calculator {
     }
 
     /**
-     *
      * End of Setters and Getters!
      */
 
-    public static int clearDisplay(){
-        return 0;
+    public static double clearDisplay(){
+
+        return displayedValue = 0;
     }
 
     public static double add(double input){
@@ -94,23 +94,9 @@ public class Calculator {
     public static double invertSign(){
         displayedValue =  displayedValue * -1;
         return displayedValue;
-
-    }
-
-    //natural logarithm
-    public static double naturalLog(){
-        displayedValue =  log(displayedValue);
-        return  displayedValue;
-    }
-
-    //baseTenLog
-    public static double baseTenLog(){
-        displayedValue = Math.log10(displayedValue);
-        return displayedValue;
     }
 
     /**Trig Functions
-
      */
 
     public static double calculateSine(){
@@ -149,42 +135,65 @@ public class Calculator {
     }
 
     /**Trig Functions end here
-
      */
 
 
-    /**switch Trig unit modes to degrees,radians
+    /**Tod do.....switch Trig unit modes to degrees,radians
      *
-     * Tod do.....
      */
+
+
 
     /**
-     *
-     * Memory functions - //add currently displayed value to memory
-     * @param displayedValue
+     * Logarithm methods
+     */
+
+    //natural logarithm
+    public static double naturalLog(){
+        displayedValue =  log(displayedValue);
+        return  displayedValue;
+    }
+
+    //baseTenLog
+    public static double baseTenLog(){
+        displayedValue = Math.log10(displayedValue);
+        return displayedValue;
+    }
+    /**To do.....
+     * 10X (inverse logarithm)
+    * Inverse Natural logarithm
+    */
+
+
+    /**
+     * Memory functions - //adds currently displayed value to memory
      */
 
     //Store in memory and update display
 
     public static double memoryPlusKey(double displayedValue){
-       setDisplayedValue(memory);
+      // setDisplayedValue(memory);
         Calculator.memory = displayedValue;
         return memory;
     }
 
-    //reset memory
     public static double resetMemoryMCKey(){
 
         return displayedValue = 0.0;
     }
 
-
-    //recall the current value form memory to display
+    //recall the current value from memory to display
     public static void recallMemoryMRCKey(){
         setDisplayedValue(memory);
      }
 
-
-
+    public static double factorial(double value) {
+        if (value == 0) {
+            displayedValue = 1;
+        } else {
+           displayedValue = value * factorial(value - 1);
+        }
+        return displayedValue;
+    }
 
 }

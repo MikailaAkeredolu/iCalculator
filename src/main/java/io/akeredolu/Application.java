@@ -14,12 +14,11 @@ import static  io.akeredolu.Display.*;
 
 public class Application {
 
+
     public void engine(){
         boolean flag = true;
         while(flag){
-           // displayCurrentMemoryValue();
-            int choice = promptUserForInt("\nPress (1) to add (2)subtract (3)multiple (4)divide (5) square \n(6) squareRoot (7)reset Memory (8)exponent (9)inverse (10)inverse the sign\n(11)natural Log (12)base10Log (13)Calculate Sine (14)ArcSin \n (15)ArcCos (16)ArcTan (17)Tan (18)M+ Key (19)Cosine (20)MRC \n(99)Clear the Display(0)exit");
-
+            int choice = promptUserForInt("\nPress (1) to add (2)subtract (3)multiple (4)divide (5) square \n(6) squareRoot (7)reset Memory (8)exponent (9)inverse (10)inverse the sign\n(11)natural Log (12)base10Log (13)Calculate Sine (14)ArcSin \n (15)ArcCos (16)ArcTan (17)Tan (18)M+ Key (19)Cosine (20)MRC \n(21)Factorial (30)switchDisplayMode (99)Clear(0)exit");
             switch(choice){
                 case 1:
                     addNumbers();
@@ -81,6 +80,11 @@ public class Application {
                 case 20:
                   recallMemoryMRCKeyNumbers();
                     break;
+                case 21:
+                    factorialNumbers();
+                case 30:
+                    switchDisplay();
+
                 case 99:
                     clearDisplay();
                     break;
@@ -91,7 +95,6 @@ public class Application {
             }
         }
     }
-
 
     /**
      * Display Current Memory and Value
@@ -130,13 +133,10 @@ public class Application {
 
     public void squareNumbers(){
        promptUserForDouble("You just squared the currently displayed value and the result is " + square());
-
-
     }
 
     public void squareRootNumbers(){
       promptUserForDouble("You just calculated the square root of the currently displayed value and the result is " + squareRoot());
-
     }
 
 
@@ -180,7 +180,6 @@ public class Application {
         promptUserForDouble("You just did an inverse the Sine of the currently displayed value and the result is " + inverseSineMethod());
         //double num = inverseSineMethod();
         //promptUser("The inverse sine of  " + displayedValue + "is = " + num);
-
     }
 
     public void inverseCosineNumber(){
@@ -215,16 +214,77 @@ public class Application {
         promptUserForDouble("The store value in memory is : " + getMemory());
     }
 
+    public void factorialNumbers(){
+        promptUserForDouble("The factorial of the " + displayedValue + " is = " + factorial(displayedValue));
+    }
+
+    /**
+     * Enum to switch modes
+     */
+
+    public enum calculatorModes{
+
+        BINARY, OCTAL, DECIMAL, HEXADECIMAL
+    }
+
+    public  calculatorModes change = calculatorModes.BINARY;
+
+
+
+    public  void switchDisplay()
+    {
+
+        switch (change)
+        {
+            case BINARY:
+                System.out.println("You are in  "+ calculatorModes.DECIMAL + " mode");
+                break;
+            case DECIMAL:
+                System.out.println(calculatorModes.OCTAL);
+                break;
+            case OCTAL:
+                System.out.println(calculatorModes.HEXADECIMAL);
+            default:
+                System.out.println("You are in  "+ calculatorModes.DECIMAL + " mode");
+        }
+
+    }
+
+
+    public void switchDisplay(String mode){
+        promptUser("Enter binary, decimal,octal or hexadecimal to switch modes");
+        switch (mode)
+        {
+            case "binary":
+                System.out.println(calculatorModes.BINARY);
+                break;
+            case "decimal":
+                System.out.println(calculatorModes.DECIMAL);
+                break;
+            case "octal":
+                System.out.println(calculatorModes.OCTAL);
+            case "hexadecimal":
+                System.out.println(calculatorModes.HEXADECIMAL);
+            default:
+                System.out.println(calculatorModes.DECIMAL);
+        }
+
+    }
+
+
     /**
      *
      * MAIN to create object and call engine to run calculator
      */
 
 
-
-
     public static void main(String[] args){
         Application app = new Application();
         app.engine();
+        //Display display = new Display();
+        //app.switchDisplay();
+        //app.switchDisplay(" ");
+        //display.askForStringInput();
+
     }
 }

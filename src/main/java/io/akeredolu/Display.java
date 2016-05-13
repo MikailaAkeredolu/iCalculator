@@ -20,11 +20,16 @@ public class Display {
         return input.nextDouble();
     }
 
-
     public static void promptUser(String msg){
 
         System.out.println(msg);
     }
+
+    public static String askForStringInput(){
+        return input.nextLine();
+    }
+
+
 
 
 
