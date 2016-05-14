@@ -170,7 +170,7 @@ public class CalculatorTest {
     public void recallMemoryMRCKeyTest(){
     Calculator.setMemory(10.0);
     double expected = 10.0;
-    double actual = Calculator.memory ;
+    double actual = Calculator.getMemory();
     assertEquals(expected, actual,1e-9);
     }
 
