@@ -11,16 +11,143 @@ import static io.akeredolu.Calculator.factorial;
  */
 public class Display {
 
-
+    /**
+     * Declaration of Enums to switch display modes
+     */
+    public double degrees;
     public Display.calculatorModes defaultMode = Display.calculatorModes.BINARY;
     Display.calculatorModes currentMode = defaultMode;
 
+    public enum calculatorModes{
+
+        BINARY, OCTAL, DECIMAL, HEXADECIMAL
+    }
+
+
+    public  void switchDisplay()
+    {
+
+        switch (currentMode)
+        {
+            case BINARY:
+                System.out.println("You are in  "+ Display.calculatorModes.DECIMAL + " mode");
+                currentMode = Display.calculatorModes.DECIMAL;
+                break;
+            case DECIMAL:
+                System.out.println(Display.calculatorModes.OCTAL);
+                currentMode = Display.calculatorModes.OCTAL;
+                break;
+            case OCTAL:
+                System.out.println(Display.calculatorModes.HEXADECIMAL);
+                currentMode = Display.calculatorModes.HEXADECIMAL;
+                break;
+            case HEXADECIMAL:
+                System.out.println("You are in  "+ Display.calculatorModes.BINARY + " mode");
+                currentMode = Display.calculatorModes.BINARY;
+                break;
+            default:
+                System.out.println("You are in  "+ Display.calculatorModes.DECIMAL + " mode");
+        }
+
+    }
+
+    /**
+     * Overloaded switch display mode method to ask user for choice of diaply mode and calculate mode
+     */
+
+    public void switchDisplay(String mode){
+        Scanner input = new Scanner(System.in);
+        System.out.println("enter a mode such as | binary | decimal | octal | hexadecimal ");
+        mode = input.nextLine();
+        switch (mode)
+        {
+            case "binary":
+                System.out.println("You are now in " + Display.calculatorModes.BINARY + " Mode and the binary of " + displayedValue + " is = " +  Integer.toBinaryString(binaryConverter()));
+                break;
+            case "decimal":
+                System.out.println("You are now in " + Display.calculatorModes.DECIMAL + "Mode");
+                break;
+            case "octal":
+                System.out.println("You are now in " + Display.calculatorModes.OCTAL +  " Mode and the octal of " + displayedValue + " is = " +  Integer.toOctalString(octalConverter()));
+                break;
+            case "hexadecimal":
+                System.out.println("You are now in " + Display.calculatorModes.HEXADECIMAL + " Mode and the hexadecimal of "  + displayedValue +  " is = " + Integer.toHexString(hexConverter()));
+                break;
+            default:
+                System.out.println("You are now in " + Display.calculatorModes.DECIMAL + " Mode");
+        }
+
+    }
+
+    /**
+     * Switch Trig Unit Modes enum
+     */
+
+    public enum trigModes{
+        RADIANS,DEGREES
+    }
+
+    trigModes defaultTrigMode = trigModes.RADIANS;
+    trigModes currentTrigMode = defaultTrigMode;
+
+    public void switchUnitsMode(){
+
+        switch(currentTrigMode){
+            case DEGREES:
+                currentTrigMode = trigModes.RADIANS;
+                System.out.println("You are currently in " + trigModes.RADIANS);
+                break;
+            case RADIANS:
+                currentTrigMode = trigModes.DEGREES;
+                System.out.println("You are currently in " + trigModes.DEGREES);
+                break;
+                default:
+                    System.out.println("You can only use degrees and radians trig modes with sine, cosine and tangents");
+        }
+    }
+
+
+    public void switchUnitMode(String unit){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter degrees or radians to switch unit mode");
+        unit = input.nextLine();
+        switch (unit){
+            case "degrees":
+                System.out.println("You are now in " + trigModes.DEGREES);//this was where calculation was before
+                break;
+            case "radians":
+                System.out.println("You are now in " + trigModes.RADIANS);
+                break;
+            default:
+                System.out.println("You can only use degrees and radians trig modes with sine, cosine and tangents");
+        }
+    }
+
+
+    /**
+     * Mode converter methods
+     */
+
+    public int octalConverter(){
+        return (int) displayedValue;
+    }
+
+    public int hexConverter(){
+        return (int) displayedValue;
+    }
+
+    public int binaryConverter(){
+        return (int) displayedValue;
+    }
+
+    /**
+     * Application engine and command line User Interface.
+     */
 
     public void engine(){
         boolean flag = true;
-        // ask the user what display
         while(flag){
-            int choice = promptUserForInt("\nPress (1) to add (2)subtract (3)multiple (4)divide (5) square \n(6) squareRoot (7)reset Memory (8)exponent (9)inverse (10)inverse the sign\n(11)natural Log (12)base10Log (13)Calculate Sine (14)ArcSin \n (15)ArcCos (16)ArcTan (17)Tan (18)M+ Key (19)Cosine (20)MRC \n(21)Factorial (30)switchDisplayMode (31)selectDisplayMode(99)Clear(0)exit");
+            int choice = promptUserForInt("\nPress (1) to add (2)subtract (3)multiple (4)divide (5) square (6) squareRoot \n (7)reset Memory (8)exponent (9)inverse (10)inverse the sign\n(11)natural Log (12)base10Log (13)Calculate Sine (14)ArcSin \n (15)ArcCos (16)ArcTan (17)Tan (18)M+ Key (19)Cosine (20)MRC \n(21)Factorial (22)RotateUnitModes (23) enter unit mode(30)switchDisplayMode \n(31)selectDisplayMode(99)Clear(0)exit");
             switch(choice){
                 case 1:
                     addNumbers();
@@ -85,6 +212,12 @@ public class Display {
                 case 21:
                     factorialNumbers();
                     break;
+                case 22:
+                    switchUnitsMode();
+                    break;
+                case 23:
+                    switchUnitMode("radians");
+                    break;
                 case 30:
                     switchDisplay();
                     break;
@@ -101,6 +234,9 @@ public class Display {
         }
     }
 
+    /**
+     * Scanner for prompt methods to prompt user for inputs
+     */
 
     public static Scanner input = new Scanner(System.in);
 
@@ -120,12 +256,14 @@ public class Display {
         System.out.println(msg);
     }
 
+    /**
+     * Display method calls for UI and for conversions
+     */
 
     public void addNumbers(){
         double a = promptUserForDouble("Enter a number to Add to the currently displayed value");
         double num = add(a);
         promptUser("The addition is " + "= " + num);
-        //printBinary((int)num);
     }
 
     public void subtractNumbers(){
@@ -188,19 +326,22 @@ public class Display {
     }
 
     public void calculateCosineNumber(){
-        promptUserForDouble("You just calculated the Cosine of the displayed value and the result is " + calculateCosine());
+
+            promptUserForDouble("You just calculated the Cosine of the displayed value and in degrees the result is " + calculateCosine());
+    }
+
+    public double flipToDegrees(){
+        Math.toDegrees(displayedValue);
+        displayedValue = Math.cos(degrees);
+        return displayedValue;
     }
 
     public void inverseSineMethodNumber(){
         promptUserForDouble("You just did an inverse the Sine of the currently displayed value and the result is " + inverseSineMethod());
-        //double num = inverseSineMethod();
-        //promptUser("The inverse sine of  " + displayedValue + "is = " + num);
     }
 
     public void inverseCosineNumber(){
         promptUserForDouble("You have just reversed the Cosine of the displayed value and the result is " + inverseCosineMethod());
-        // double num = inverseCosineMethod();
-        //promptUser("The inverse of cosine " + displayedValue + "is = " + num);
     }
 
     public void inverseTangentNumber(){
@@ -218,8 +359,6 @@ public class Display {
 
     public void memoryPlusKeyNumber(){
         promptUserForDouble("you have stored the displayed value to memory " + memoryPlusKey(getDisplayedValue()));
-        // double num = memo;
-        //promptUser("The product is " + "= " + num);
     }
 
     public void recallMemoryMRCKeyNumbers(){
@@ -229,109 +368,5 @@ public class Display {
     public void factorialNumbers(){
         promptUserForDouble("The factorial of the " + displayedValue + " is = " + factorial(displayedValue));
     }
-
-    /**
-     * Enum to switch modes
-     */
-
-    public enum calculatorModes{
-
-        BINARY, OCTAL, DECIMAL, HEXADECIMAL
-    }
-
-
-    public  void switchDisplay()
-    {
-
-        switch (currentMode)
-        {
-            case BINARY:
-                System.out.println("You are in  "+ Display.calculatorModes.DECIMAL + " mode");
-                currentMode = Display.calculatorModes.DECIMAL;
-                break;
-            case DECIMAL:
-                System.out.println(Display.calculatorModes.OCTAL);
-                currentMode = Display.calculatorModes.OCTAL;
-                break;
-            case OCTAL:
-                System.out.println(Display.calculatorModes.HEXADECIMAL);
-                currentMode = Display.calculatorModes.HEXADECIMAL;
-                break;
-            case HEXADECIMAL:
-                System.out.println("You are in  "+ Display.calculatorModes.BINARY + " mode");
-                currentMode = Display.calculatorModes.BINARY;
-                break;
-            default:
-                System.out.println("You are in  "+ Display.calculatorModes.DECIMAL + " mode");
-        }
-
-    }
-
-    public void switchDisplay(String mode){
-        Scanner input = new Scanner(System.in);
-        System.out.println("enter a mode such as | binary | decimal | octal | hexadecimal ");
-        mode = input.nextLine();
-        switch (mode)
-        {
-            case "binary":
-                System.out.println("You are now in " + Display.calculatorModes.BINARY + " Mode and the binary of " + displayedValue + " is = " +  Integer.toBinaryString(binaryConverter()));
-                break;
-            case "decimal":
-                System.out.println("You are now in " + Display.calculatorModes.DECIMAL + "Mode");
-                break;
-            case "octal":
-                System.out.println("You are now in " + Display.calculatorModes.OCTAL +  " Mode and the octal of " + displayedValue + " is = " +  Integer.toOctalString(octalConverter()));
-                break;
-            case "hexadecimal":
-                System.out.println("You are now in " + Display.calculatorModes.HEXADECIMAL + " Mode and the hexadecimal of "  + displayedValue +  " is = " + Integer.toHexString(hexConverter()));
-                break;
-            default:
-                System.out.println("You are now in " + Display.calculatorModes.DECIMAL + " Mode");
-        }
-
-    }
-
-    public int octalConverter(){
-        return (int) displayedValue;
-    }
-
-    public int hexConverter(){
-        return (int) displayedValue;
-    }
-
-    public int binaryConverter(){
-        return (int) displayedValue;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }

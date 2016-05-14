@@ -1,6 +1,12 @@
 package io.akeredolu;
 
+import java.util.Scanner;
+import static io.akeredolu.Display.*;
+import static io.akeredolu.Display.trigModes.DEGREES;
+import static io.akeredolu.Display.trigModes.RADIANS;
+
 import static java.lang.Math.log;
+import static java.lang.Math.toDegrees;
 
 /**
  * Created by mikailaakeredolu on 5/10/16.
@@ -13,6 +19,7 @@ public class Calculator {
 
     public static double displayedValue = 0;
     public static double radians;
+    //public static double degrees;
     public static double memory = 0;
 
     /**
@@ -36,14 +43,16 @@ public class Calculator {
         Calculator.displayedValue = displayedValue;
     }
 
-    /**
-     * End of Setters and Getters!
-     */
+    static Display displayObject = new Display();
 
     public static double clearDisplay(){
-
-        return displayedValue = 0;
+            displayedValue = 0;
+        return displayedValue;
     }
+
+    /**
+     * Methods to perform calculations
+     */
 
     public static double add(double input){
 
@@ -112,10 +121,12 @@ public class Calculator {
     }
 
     public static double calculateCosine(){
-        //in radians
-        radians = Math.toRadians(displayedValue);
-        displayedValue = Math.cos(radians);
-        return displayedValue;
+
+            radians = Math.toRadians(displayedValue);
+            displayedValue = Math.cos(radians);
+            return displayedValue;
+        }
+
         //if its degrees
 
         /*
@@ -123,7 +134,6 @@ public class Calculator {
         displayedValue = Math.cos(radians);
         return displayedValue;
         */
-    }
 
     public static double inverseSineMethod(){
         displayedValue = Math.toDegrees(Math.asin(displayedValue));
@@ -140,10 +150,6 @@ public class Calculator {
        displayedValue = Math.toDegrees(Math.atan(displayedValue));
         return  displayedValue;
     }
-
-    /**Trig Functions end here
-     */
-
 
     /**Tod do.....switch Trig unit modes to degrees,radians
      *
@@ -187,7 +193,6 @@ public class Calculator {
         return displayedValue = 0.0;
     }
 
-    //recall the current value from memory to display
     public static void recallMemoryMRCKey(){
         setDisplayedValue(memory);
      }

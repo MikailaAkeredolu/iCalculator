@@ -74,7 +74,6 @@ public class CalculatorTest {
         assertEquals(expected, actual,0.1);
     }
 
-    //invertTheNumber
     @Test
     public void invertTheSignTest(){
         Calculator.displayedValue = 4.0;
@@ -83,7 +82,6 @@ public class CalculatorTest {
         assertEquals(expected, actual,0.1);
     }
 
-    //calculateLog
     @Test
     public void naturalLogTest(){
         Calculator.displayedValue = 10.0;
@@ -92,8 +90,6 @@ public class CalculatorTest {
         assertEquals(expected, actual,0.1);
     }
 
-    //baseTenLog
-
     @Test
     public void baseTenLogTest(){
         Calculator.displayedValue = 10.0;
@@ -101,8 +97,6 @@ public class CalculatorTest {
         double actual = baseTenLog();
         assertEquals(expected, actual,0.1);
     }
-
-    //calculateSine
 
     @Test
     public void calculateSineTest(){
@@ -136,7 +130,6 @@ public class CalculatorTest {
         assertEquals(expected, actual,0.1);
     }
 
-    //calculateTangent
 
     @Test
     public void calculateTangentTest(){
@@ -145,7 +138,6 @@ public class CalculatorTest {
         assertEquals(expected, actual,.01);
     }
 
-    //memoryPlusKey
 
     @Test
     public void memoryPlusKeyTest(){
@@ -156,7 +148,6 @@ public class CalculatorTest {
         assertEquals(expected, actual,1e-9);
     }
 
-    //mCeeKey()
 
     @Test
     public void resetMemoryTest(){
