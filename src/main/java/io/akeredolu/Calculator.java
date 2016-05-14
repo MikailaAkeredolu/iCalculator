@@ -19,7 +19,7 @@ public class Calculator {
 
     public static double displayedValue = 0;
     public static double radians;
-    //public static double degrees;
+    public static double degrees;
     public static double memory = 0;
 
     /**
@@ -43,7 +43,7 @@ public class Calculator {
         Calculator.displayedValue = displayedValue;
     }
 
-    static Display displayObject = new Display();
+   // static Display displayObject = new Display();
 
     public static double clearDisplay(){
             displayedValue = 0;
@@ -109,22 +109,42 @@ public class Calculator {
      */
 
     public static double calculateSine(){
-        radians = Math.toRadians(displayedValue);
-        displayedValue = Math.sin(radians);
-        return displayedValue;
+
+        if(Display.currentTrigMode == trigModes.DEGREES){
+            degrees = Math.toDegrees(displayedValue);
+            displayedValue = Math.sin(radians);
+            return displayedValue;
+        }else{
+            radians = Math.toRadians(displayedValue);
+            displayedValue = Math.sin(radians);
+            return displayedValue;
+        }
+
     }
 
     public static double calculateTangent(){
-        radians = Math.toRadians(displayedValue);
-        displayedValue = Math.tan(radians);
-        return displayedValue;
+        if(Display.currentTrigMode == trigModes.DEGREES){
+            degrees = Math.toDegrees(displayedValue);
+            displayedValue = Math.tan(radians);
+            return displayedValue;
+        }else{
+            radians = Math.toRadians(displayedValue);
+            displayedValue = Math.tan(radians);
+            return displayedValue;
+        }
     }
 
     public static double calculateCosine(){
 
+        if(Display.currentTrigMode == trigModes.DEGREES){
+            degrees = Math.toDegrees(displayedValue);
+            displayedValue = Math.cos(radians);
+            return displayedValue;
+        }else{
             radians = Math.toRadians(displayedValue);
             displayedValue = Math.cos(radians);
             return displayedValue;
+        }
         }
 
         //if its degrees

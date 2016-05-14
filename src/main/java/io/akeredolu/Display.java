@@ -14,7 +14,7 @@ public class Display {
     /**
      * Declaration of Enums to switch display modes
      */
-    public double degrees;
+  //  public double degrees;
     public Display.calculatorModes defaultMode = Display.calculatorModes.BINARY;
     Display.calculatorModes currentMode = defaultMode;
 
@@ -87,8 +87,8 @@ public class Display {
         RADIANS,DEGREES
     }
 
-    trigModes defaultTrigMode = trigModes.RADIANS;
-    trigModes currentTrigMode = defaultTrigMode;
+   public static trigModes defaultTrigMode = trigModes.RADIANS;
+    public static trigModes currentTrigMode = defaultTrigMode;
 
     public void switchUnitsMode(){
 
@@ -108,15 +108,15 @@ public class Display {
 
 
     public void switchUnitMode(String unit){
-        Scanner input = new Scanner(System.in);
+        Scanner userInput = new Scanner(System.in);
         System.out.println("Enter degrees or radians to switch unit mode");
-        unit = input.nextLine();
+        unit = userInput.nextLine();
         switch (unit){
             case "degrees":
-                System.out.println("You are now in " + trigModes.DEGREES);//this was where calculation was before
+                System.out.println("You are now in " + trigModes.DEGREES + " Mode " + calculateCosine());
                 break;
             case "radians":
-                System.out.println("You are now in " + trigModes.RADIANS);
+                System.out.println("You are now in " + trigModes.RADIANS + " Mode ");
                 break;
             default:
                 System.out.println("You can only use degrees and radians trig modes with sine, cosine and tangents");
@@ -146,11 +146,13 @@ public class Display {
 
     public void engine(){
         boolean flag = true;
+
         while(flag){
+            //print display value printDisplay(display)
             int choice = promptUserForInt("\nPress (1) to add (2)subtract (3)multiple (4)divide (5) square (6) squareRoot \n (7)reset Memory (8)exponent (9)inverse (10)inverse the sign\n(11)natural Log (12)base10Log (13)Calculate Sine (14)ArcSin \n (15)ArcCos (16)ArcTan (17)Tan (18)M+ Key (19)Cosine (20)MRC \n(21)Factorial (22)RotateUnitModes (23) enter unit mode(30)switchDisplayMode \n(31)selectDisplayMode(99)Clear(0)exit");
             switch(choice){
                 case 1:
-                    addNumbers();
+                   addNumbers();
                     break;
                 case 2:
                     subtractNumbers();
@@ -329,12 +331,13 @@ public class Display {
 
             promptUserForDouble("You just calculated the Cosine of the displayed value and in degrees the result is " + calculateCosine());
     }
-
+/*
     public double flipToDegrees(){
         Math.toDegrees(displayedValue);
         displayedValue = Math.cos(degrees);
         return displayedValue;
     }
+    */
 
     public void inverseSineMethodNumber(){
         promptUserForDouble("You just did an inverse the Sine of the currently displayed value and the result is " + inverseSineMethod());

@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f6cbbe1-0d9b-42fe-a3f9-5f823df58455" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/io/akeredolu/Application.class" afterPath="$PROJECT_DIR$/target/classes/io/akeredolu/Application.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/io/akeredolu/Calculator.class" afterPath="$PROJECT_DIR$/target/classes/io/akeredolu/Calculator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/io/akeredolu/Display$1.class" afterPath="$PROJECT_DIR$/target/classes/io/akeredolu/Display$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/io/akeredolu/Display$calculatorModes.class" afterPath="$PROJECT_DIR$/target/classes/io/akeredolu/Display$calculatorModes.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/io/akeredolu/Display.class" afterPath="$PROJECT_DIR$/target/classes/io/akeredolu/Display.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/io/akeredolu/CalculatorTest.class" afterPath="$PROJECT_DIR$/target/test-classes/io/akeredolu/CalculatorTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/akeredolu/Application.java" afterPath="$PROJECT_DIR$/src/main/java/io/akeredolu/Application.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/akeredolu/Calculator.java" afterPath="$PROJECT_DIR$/src/main/java/io/akeredolu/Calculator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/akeredolu/Display.java" afterPath="$PROJECT_DIR$/src/main/java/io/akeredolu/Display.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/io/akeredolu/CalculatorTest.java" afterPath="$PROJECT_DIR$/src/test/java/io/akeredolu/CalculatorTest.java" />
     </list>
     <ignored path="iCalculator.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,34 +40,34 @@
       <file leaf-file-name="Calculator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/akeredolu/Calculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1935">
-              <caret line="135" column="10" selection-start-line="135" selection-start-column="10" selection-end-line="135" selection-end-column="10" />
+            <state relative-caret-position="615">
+              <caret line="132" column="33" selection-start-line="132" selection-start-column="19" selection-end-line="132" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4558#4559#0" expanded="true" />
-                <element signature="e#4600#4601#0" expanded="true" />
+                <element signature="e#5244#5245#0" expanded="true" />
+                <element signature="e#5286#5287#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Display.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Display.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/akeredolu/Display.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-501">
-              <caret line="115" column="113" selection-start-line="115" selection-start-column="113" selection-end-line="115" selection-end-column="113" />
+            <state relative-caret-position="-2329">
+              <caret line="154" column="32" selection-start-line="154" selection-start-column="32" selection-end-line="154" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4525#4526#0" expanded="true" />
-                <element signature="e#4568#4569#0" expanded="true" />
-                <element signature="e#4600#4601#0" expanded="true" />
-                <element signature="e#4643#4644#0" expanded="true" />
-                <element signature="e#4678#4679#0" expanded="true" />
-                <element signature="e#4721#4722#0" expanded="true" />
-                <element signature="e#11906#11907#0" expanded="true" />
-                <element signature="e#11997#11998#0" expanded="true" />
-                <element signature="e#12205#12206#0" expanded="true" />
-                <element signature="e#12289#12290#0" expanded="true" />
+                <element signature="e#4565#4566#0" expanded="true" />
+                <element signature="e#4608#4609#0" expanded="true" />
+                <element signature="e#4640#4641#0" expanded="true" />
+                <element signature="e#4683#4684#0" expanded="true" />
+                <element signature="e#4718#4719#0" expanded="true" />
+                <element signature="e#4761#4762#0" expanded="true" />
+                <element signature="e#12011#12012#0" expanded="true" />
+                <element signature="e#12102#12103#0" expanded="true" />
+                <element signature="e#12310#12311#0" expanded="true" />
+                <element signature="e#12394#12395#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -92,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CalculatorTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CalculatorTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/io/akeredolu/CalculatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            <state relative-caret-position="885">
+              <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -163,10 +154,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="23" />
-    <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="714" />
+    <option name="x" value="-176" />
+    <option name="y" value="-1037" />
+    <option name="width" value="1618" />
+    <option name="height" value="956" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -855,7 +846,7 @@
       <option name="presentableId" value="Default" />
       <updated>1462891230585</updated>
       <workItem from="1462891234015" duration="44542000" />
-      <workItem from="1463079021999" duration="48003000" />
+      <workItem from="1463079021999" duration="56008000" />
     </task>
     <servers />
   </component>
@@ -892,7 +883,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92545000" />
+    <option name="totallyTimeSpent" value="100550000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -904,7 +895,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="23" y="23" width="1280" height="714" extended-state="0" />
+    <frame x="-176" y="-1037" width="1618" height="956" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -915,11 +906,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.503231" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4067524" sideWeight="0.49676898" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40625" sideWeight="0.49676898" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17851374" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14022842" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -970,8 +961,8 @@
           <caret line="162" column="22" selection-start-line="162" selection-start-column="22" selection-end-line="162" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4558#4559#0" expanded="true" />
-            <element signature="e#4600#4601#0" expanded="true" />
+            <element signature="e#5244#5245#0" expanded="true" />
+            <element signature="e#5286#5287#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1000,34 +991,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/akeredolu/Calculator.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/io/akeredolu/CalculatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1935">
-          <caret line="135" column="10" selection-start-line="135" selection-start-column="10" selection-end-line="135" selection-end-column="10" />
+        <state relative-caret-position="885">
+          <caret line="74" column="5" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4558#4559#0" expanded="true" />
-            <element signature="e#4600#4601#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/akeredolu/Display.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/akeredolu/Calculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-501">
-          <caret line="115" column="113" selection-start-line="115" selection-start-column="113" selection-end-line="115" selection-end-column="113" />
+        <state relative-caret-position="615">
+          <caret line="132" column="33" selection-start-line="132" selection-start-column="19" selection-end-line="132" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4525#4526#0" expanded="true" />
-            <element signature="e#4568#4569#0" expanded="true" />
-            <element signature="e#4600#4601#0" expanded="true" />
-            <element signature="e#4643#4644#0" expanded="true" />
-            <element signature="e#4678#4679#0" expanded="true" />
-            <element signature="e#4721#4722#0" expanded="true" />
-            <element signature="e#11906#11907#0" expanded="true" />
-            <element signature="e#11997#11998#0" expanded="true" />
-            <element signature="e#12205#12206#0" expanded="true" />
-            <element signature="e#12289#12290#0" expanded="true" />
+            <element signature="e#5244#5245#0" expanded="true" />
+            <element signature="e#5286#5287#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1040,12 +1021,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/io/akeredolu/CalculatorTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/akeredolu/Display.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        <state relative-caret-position="-2329">
+          <caret line="154" column="32" selection-start-line="154" selection-start-column="32" selection-end-line="154" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4565#4566#0" expanded="true" />
+            <element signature="e#4608#4609#0" expanded="true" />
+            <element signature="e#4640#4641#0" expanded="true" />
+            <element signature="e#4683#4684#0" expanded="true" />
+            <element signature="e#4718#4719#0" expanded="true" />
+            <element signature="e#4761#4762#0" expanded="true" />
+            <element signature="e#12011#12012#0" expanded="true" />
+            <element signature="e#12102#12103#0" expanded="true" />
+            <element signature="e#12310#12311#0" expanded="true" />
+            <element signature="e#12394#12395#0" expanded="true" />
           </folding>
         </state>
       </provider>
